@@ -67,7 +67,11 @@ body {
   min-height: 100%;
   position: relative; }
 
+.header {
+  width: 100%; }
+
 .content {
+  width: 100%;
   overflow: hidden;
   padding-bottom: 8.44rem; }
 
@@ -85,6 +89,8 @@ body {
 
 @media screen and (max-width: 400px) {
   .footer {
-    height: 2rem; } }
+    height: 2rem; }
+    .footer .container {
+      width: 100%; } }
 
 /*# sourceMappingURL=master.css.map */
