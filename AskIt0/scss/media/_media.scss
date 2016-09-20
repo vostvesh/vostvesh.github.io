@@ -14,7 +14,7 @@
 }
 
 /*Middle*/
-@media  (min-width : 480px) {
+@media  (min-width : 480px) and (max-width: 1850px) {
   .footer {
     height: 31.38rem;
     margin-top: -31.38rem;
@@ -28,15 +28,3 @@
 }
 
 /*Normal*/
-@media (min-width : 1024px) {
-  .footer {
-    height: 31.38rem;
-    margin-top: -31.38rem;
-    .container {
-      width: 4.8rem;
-    }
-  }
-  .wrapper:after {
-    height: 31.38rem;
-  }
-}
