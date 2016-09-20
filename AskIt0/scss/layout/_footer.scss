@@ -1,0 +1,16 @@
+.footer {
+  width: 100%;
+  height: 8.44rem;//(высота футера, добавить в .content)
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $footer-bg;
+  color: $font-light;
+
+  .container {
+    width: 18.50rem;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
