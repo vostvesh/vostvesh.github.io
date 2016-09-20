@@ -1,9 +1,9 @@
 .footer {
   width: 100%;
   height: 8.44rem;//(высота футера, добавить в .content)
-  position: absolute;
+  position: relative;
   bottom: 0;
-  margin-top: -844px;
+  margin-top: -8.44rem;
   background-color: $footer-bg;
   color: $font-light;
 

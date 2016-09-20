@@ -1,9 +1,12 @@
 @media screen and (max-width: 400px) {
   .footer {
     height: 2rem;
-
+    margin-top: -2rem;
     .container {
       width: 100%;
     }
+  }
+  .wrapper:after {
+    height: 2rem;
   }
 }
