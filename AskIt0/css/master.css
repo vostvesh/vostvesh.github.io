@@ -100,33 +100,33 @@ div {
   width: 100%; }
 
 /*Small*/
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) {
   .footer {
     height: 12.85rem;
     margin-top: -12.85rem; }
     .footer .container {
-      width: 100%;
+      width: 3.2rem;
       margin: 0; }
 
   .wrapper:after {
     height: 12.85rem; } }
 /*Middle*/
-@media only screen and (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) {
   .footer {
     height: 31.38rem;
     margin-top: -31.38rem; }
     .footer .container {
-      width: 100%; }
+      width: 4.8rem; }
 
   .wrapper:after {
     height: 31.38rem; } }
 /*Normal*/
-@media only screen and (min-width: 1024px) and (max-width: 1860) {
+@media (min-width: 1024px) {
   .footer {
     height: 31.38rem;
     margin-top: -31.38rem; }
     .footer .container {
-      width: 100%; }
+      width: 4.8rem; }
 
   .wrapper:after {
     height: 31.38rem; } }
