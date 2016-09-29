@@ -9,7 +9,7 @@ window.onload = function () {
     value: 50,
     parentElem: '.myDiv',
     innerCircleWidth: 4,
-    outerCircleWidth: 20,
+    outerCircleWidth: w / 10,
     innerColor: 'grey',
     outerColor: 'red',
     textColor: null,
