@@ -11,14 +11,16 @@ window.onload = function () {
     innerCircleWidth: 4,
     outerCircleWidth: w / 10,
     innerColor: 'grey',
-    outerColor: 'red',
+    outerColor: 'green',
     textColor: null,
     duration: 3000
   };
 
   var chart1 = new Chart(data);
   data.value = 90;
+  data.outerColor = 'red';
   var chart2 = new Chart(data);
   data.value = 10;
+  data.outerColor = 'lightblue';
   var chart3 = new Chart(data);
 };
