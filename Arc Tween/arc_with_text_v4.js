@@ -2,12 +2,13 @@ var Chart = function Chart(params) {
   this.name = params.name;
   this.width = params.width;
   this.value = params.value;
+  this.text = params.text;
+  this.textColor = params.textColor;
   this.parentElem = params.parentElem;
   this.innerCircleWidth = params.innerCircleWidth;
   this.outerCircleWidth = params.outerCircleWidth;
   this.innerColor = params.innerColor;
   this.outerColor = params.outerColor;
-  this.textColor = params.textColor;
   this.duration = params.duration;
 
   var xCenter = this.width / 2,
@@ -28,7 +29,7 @@ var Chart = function Chart(params) {
     .cornerRadius(arcCornerRds)
     .innerRadius(arcInnerRds)
     .outerRadius(arcOuterRds)
-    .startAngle(0);
+    .startAngle(15);
 
   var g = svg.append('g');
 
@@ -41,25 +42,33 @@ var Chart = function Chart(params) {
     .attr('r', r);
   var txt = g.append('text').text(0)
     .attr('x', xCenter)
-    .attr('y', yCenter)
+    .attr('y', yCenter - this.width / 10)
     .style('text-anchor', 'middle')
     .style('dominant-baseline', 'central')
-    .style('fill', this.textColor || this.outerColor)
+    .style('fill', this.outerColor || this.textColor)
     .style('font-size', this.width / 4)
     .style('font-family', 'sans-serif')
     .style('font-weight', 'bold');
+  var txt2 = g.append('text').text(this.text)
+    .attr('x', xCenter)
+    .attr('y', yCenter + this.width / 10)
+    .style('text-anchor', 'middle')
+    .style('dominant-baseline', 'central')
+    .style('fill', this.textColor || this.outerColor)
+    .style('font-size', this.width / 10)
+    .style('font-family', 'sans-serif');
   var path = g.append('path')
     .attr('transform', 'translate(' + xCenter + ', ' + yCenter + ')')
     .style('stroke', this.outerColor)
     .style('fill', this.outerColor)
     .datum({
-      endAngle: 0
+      endAngle: 15
     })
     .attr('d', arc);
 
   path.transition()
     .duration(this.duration)
-    .attrTween("d", arcTween(arcEndAngle));
+    .attrTween("d", arcTween(arcEndAngle + 15));
 
   txt.transition()
     .duration(this.duration)
