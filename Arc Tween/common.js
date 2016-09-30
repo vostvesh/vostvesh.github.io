@@ -2,7 +2,6 @@ window.onload = function () {
   var myDiv = document.getElementsByClassName('myDiv')[0];
   var w = myDiv.offsetWidth / 3 - 30;
 
-
   var data = {
     name: 'chart',
     width: w,
@@ -23,4 +22,20 @@ window.onload = function () {
   data.value = 10;
   data.outerColor = 'lightblue';
   var chart3 = new Chart(data);
+
+  window.onresize = function () {
+    var myDiv = document.getElementsByClassName('myDiv')[0];
+    var w = myDiv.offsetWidth / 3 - 30;
+    var scale = w / data.width;
+
+    var charts = document.getElementsByClassName('chart');
+
+    for (var i = 0; i < charts.length; i++) {
+      var chart = charts[i];
+      var g = chart.firstElementChild;
+      g.style.transform = 'scale(' + scale + ')';
+      chart.setAttribute('width', w);
+      chart.setAttribute('height', w);
+    }
+  };
 };

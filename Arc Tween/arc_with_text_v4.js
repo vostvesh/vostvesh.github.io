@@ -32,7 +32,7 @@ var Chart = function Chart(params) {
 
   var g = svg.append('g');
 
-  g.append('circle')
+  var circle = g.append('circle')
     .style('fill', 'transparent')
     .style('stroke', this.innerColor)
     .style('stroke-width', this.innerCircleWidth)
