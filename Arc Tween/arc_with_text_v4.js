@@ -76,8 +76,8 @@ txt.transition()
   function textTween(newValue) {
       return function() {
          var self = this;
-         var last = +self.textContent || 0;
-         var i = d3.interpolateRound(last, newValue);
+         var lastValue = +self.textContent || 0;
+         var i = d3.interpolateRound(lastValue, newValue);
            return function(t){
              self.textContent = i(t);
            };
