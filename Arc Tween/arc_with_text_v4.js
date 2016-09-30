@@ -39,7 +39,7 @@ var Chart = function Chart(params) {
     .attr('cx', xCenter)
     .attr('cy', yCenter)
     .attr('r', r);
-  g.append('text').text(this.value)
+var txt = g.append('text').text(0)
     .attr('x', xCenter)
     .attr('y', yCenter)
     .style('text-anchor', 'middle')
@@ -55,9 +55,13 @@ var path = g.append('path')
     .datum({endAngle: 0})
     .attr('d', arc)
     ;
-    path.transition()
-        .duration(this.duration)
-        .attrTween("d", arcTween(arcEndAngle));
+path.transition()
+    .duration(this.duration)
+    .attrTween("d", arcTween(arcEndAngle));
+
+txt.transition()
+   .duration(this.duration)
+   .tween("text", textTween(this.value));
 
   function arcTween(newAngle) {
     return function(d) {
@@ -68,4 +72,16 @@ var path = g.append('path')
       };
     };
   }
+
+  function textTween(newValue) {
+      return function() {
+         var self = this;
+         var last = +self.textContent || 0;
+         var i = d3.interpolateRound(last, newValue);
+           return function(t){
+             self.textContent = i(t);
+           };
+         };
+  }
+
 };
