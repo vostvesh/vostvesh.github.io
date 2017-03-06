@@ -1,0 +1,70 @@
+/*form*/
+.form__item {
+  padding: 10px 0;
+}
+.form__label {
+  padding-bottom: 10px;
+  font-size: 1.8rem;
+  line-height: 3.4rem;
+  color: #55595c;
+}
+.form__input {
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  padding: 5px 12px;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+}
+.form__input--select {
+  padding: 8px;
+  color: #55595c;
+}
+.form__input--textarea {
+  font-family: 'Open Sans', sans-serif;
+  height: 126px;
+}
+.form__option {
+  color: #55595c;
+}
+.form__checkbox {
+  margin-top: 3px;
+  cursor: pointer;
+}
+.form__check {
+  display: none;
+}
+.form__check-fake {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #cecece;
+}
+.form__checkbox .form__check:checked ~ .form__check-fake {
+  background-color: #2287bb;
+  background-size: 80%;
+}
+.form__check-text {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #363636;
+  user-select: none;
+}
+.form__submit {
+  margin-top: 17px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 2rem;
+}
+.form__link-btn--submit {
+  background-color: #5bb85d;
+  padding: 14px 23px;
+}
+.form__link-btn--submit:hover {
+  background-color: #7ad37c;
+}
+.form__link-btn--submit:active {
+  background-color: #4b9c4e;
+}
+/*end form*/

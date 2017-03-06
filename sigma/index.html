@@ -6,31 +6,32 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Sigma</title>
   <link rel="stylesheet" href="fonts/icons-font/css/fontello.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fonts/Open_Sans/OpenSans.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header" id="to-top">
       <div class="header__head">
         <div class="header__logo">
           <div class="logo">
-            <div class="logo__title">Sigma</div>
-            <div class="logo__subtitle">Image Galary built on Bootstrap 4.0</div>
+            <h1 class="logo__title">Sigma</h1>
+            <p class="logo__subtitle">Image Gallery built on Bootstrap 4.0</p>
           </div>
         </div>
         <div class="header__navbar">
           <ul class="menu">
             <li class="menu__item">
-              <a href="#" class="menu__item-link">Home</a>
+              <a href="#title" class="menu__item-link">Home</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__item-link">Gallery</a>
+              <a href="#gallery" class="menu__item-link">Gallery</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__item-link">About</a>
+              <a href="#about" class="menu__item-link">About</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__item-link">Contact</a>
+              <a href="#contacts" class="menu__item-link">Contact</a>
             </li>
             <li class="menu__item">
               <a href="#" class="menu__item-link">External</a>
@@ -39,15 +40,17 @@
         </div>
       </div>
       <div class="header__main">
-        <div class="header__title">
+        <div class="header__title" id="title">
           <div class="title">
             <h1 class="title__title">Bootstrap 4.0 Theme</h1>
-            <h2 class="title__subtitle">Sigma is free Bootstrap 4(alpha2) theme designed for a metro-style image grid galary. Download, modify and use this layout for your websites.</h2>
-            <div class="title__link">
-              <a class="title__link-btn title__link-btn--galary" href="#">Our Gallery</a>
-            </div>
-            <div class="title__link">
-              <a class="title__link-btn title__link-btn--about" href="#">Learn More</a>
+            <h2 class="title__subtitle">Sigma is free Bootstrap 4 (alpha 2) theme designed for a metro-style image grid gallery. Download, modify and use this layout for your websites.</h2>
+            <div class="title__links">
+              <div class="title__link">
+                <a class="title__link-btn title__link-btn--galary" href="#gallery">Our Gallery</a>
+              </div>
+              <div class="title__link">
+                <a class="title__link-btn title__link-btn--about" href="#about">Learn More</a>
+              </div>
             </div>
           </div>
         </div>
@@ -57,7 +60,7 @@
       <section class="main__features">
         <div class="features">
           <div class="features__item features__item--1">
-            <i class="features__icon icon-power"></i>
+            <i class="features__icon icon-off"></i>
             <h3 class="features__title">Design</h3>
             <p class="features__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, sint recusandae ipsa necessitatibus animi!</p>
           </div>
@@ -78,71 +81,83 @@
           </div>
         </div>
       </section>
-      <section class="main__gallery">
+      <section class="main__gallery" id="gallery">
         <div class="gallery">
-          <div class="gallery__group-1">
-            <figure class="gallery__item">
-              <img class="gallery__img" src="./imgs/Photo1.jpg" alt="Photo1">
-              <figcaption class="gallery__img-caption">View</figcaption>
-            </figure>
-            <figure class="gallery__item">
-              <img class="gallery__img" src="./imgs/Photo2.jpg" alt="Photo2">
-              <figcaption class="gallery__img-caption">View</figcaption>
-            </figure>
-            <figure class="gallery__item">
-              <img class="gallery__img" src="./imgs/Photo3.jpg" alt="Photo3">
-              <figcaption class="gallery__img-caption">View</figcaption>
-            </figure>
-          </div>
-          <div class="gallery__group-2">
-            <div class="gallery__group-2-single">
-              <figure class="gallery__item">
-                <img class="gallery__img" src="./imgs/Photo6.jpg" alt="Photo6">
-                <figcaption class="gallery__img-caption">View</figcaption>
-              </figure>
-            </div>
-            <div class="gallery__group-2-double">
-              <figure class="gallery__item">
-                <img class="gallery__img" src="./imgs/Photo4.jpg" alt="Photo4">
-                <figcaption class="gallery__img-caption">View</figcaption>
-              </figure>
-              <figure class="gallery__item">
-                <img class="gallery__img" src="./imgs/Photo5.jpg" alt="Photo5">
-                <figcaption class="gallery__img-caption">View</figcaption>
-              </figure>
-            </div>
-          </div>
-          <div class="gallery__group-3">
-            <figure class="gallery__item">
-              <img class="gallery__img" src="./imgs/Photo7.jpg" alt="Photo7">
-              <figcaption class="gallery__img-caption">View</figcaption>
-            </figure>
-            <figure class="gallery__item">
-              <img class="gallery__img" src="./imgs/Photo8.jpg" alt="Photo8">
-              <figcaption class="gallery__img-caption">View</figcaption>
-            </figure>
-          </div>
-          <div class="gallery__group-4">
-            <figure class="gallery__item">
-              <img class="gallery__img" src="./imgs/Photo1.jpg" alt="Photo1">
-              <figcaption class="gallery__img-caption">View</figcaption>
-            </figure>
-            <figure class="gallery__item">
-              <img class="gallery__img" src="./imgs/Photo2.jpg" alt="Photo2">
-              <figcaption class="gallery__img-caption">View</figcaption>
-            </figure>
-            <figure class="gallery__item">
-              <img class="gallery__img" src="./imgs/Photo3.jpg" alt="Photo3">
-              <figcaption class="gallery__img-caption">View</figcaption>
-            </figure>
-            <figure class="gallery__item">
-              <img class="gallery__img" src="./imgs/Photo4.jpg" alt="Photo4">
-              <figcaption class="gallery__img-caption">View</figcaption>
-            </figure>
-          </div>
+          <figure class="gallery__item">
+            <label class="gallery__link">
+              <input class="gallery__checkbox" type="checkbox">
+              <img class="gallery__img" src="./imgs/tm-sigma-01.jpg" alt="picture1">              
+            </label>            
+          </figure>
+          <figure class="gallery__item">
+            <label class="gallery__link">
+              <input class="gallery__checkbox" type="checkbox">              
+              <img class="gallery__img" src="./imgs/tm-sigma-02.jpg" alt="picture1">              
+            </label>            
+          </figure>
+          <figure class="gallery__item">
+            <label class="gallery__link">
+              <input class="gallery__checkbox" type="checkbox">              
+              <img class="gallery__img" src="./imgs/tm-sigma-03.jpg" alt="picture1">              
+            </label>            
+          </figure>
+          <figure class="gallery__item">
+            <label class="gallery__link">
+              <input class="gallery__checkbox" type="checkbox">              
+              <img class="gallery__img" src="./imgs/tm-sigma-04.jpg" alt="picture1">              
+            </label>            
+          </figure>
+          <figure class="gallery__item">
+            <label class="gallery__link">
+              <input class="gallery__checkbox" type="checkbox">              
+              <img class="gallery__img" src="./imgs/tm-sigma-05.jpg" alt="picture1">              
+            </label>            
+          </figure>
+          <figure class="gallery__item">
+            <label class="gallery__link">
+              <input class="gallery__checkbox" type="checkbox">              
+              <img class="gallery__img" src="./imgs/tm-sigma-06.jpg" alt="picture1">              
+            </label>            
+          </figure>
+          <figure class="gallery__item">
+            <label class="gallery__link">
+              <input class="gallery__checkbox" type="checkbox">              
+              <img class="gallery__img" src="./imgs/tm-sigma-07.jpg" alt="picture1">              
+            </label>            
+          </figure>
+          <figure class="gallery__item">
+            <label class="gallery__link">
+              <input class="gallery__checkbox" type="checkbox">              
+              <img class="gallery__img" src="./imgs/tm-sigma-08.jpg" alt="picture1">              
+            </label>            
+          </figure>
+          <figure class="gallery__item">
+            <label class="gallery__link">
+              <input class="gallery__checkbox" type="checkbox">              
+              <img class="gallery__img" src="./imgs/tm-sigma-01.jpg" alt="picture1">              
+            </label>            
+          </figure>
+          <figure class="gallery__item">
+            <label class="gallery__link">
+              <input class="gallery__checkbox" type="checkbox">              
+              <img class="gallery__img" src="./imgs/tm-sigma-02.jpg" alt="picture1">              
+            </label>            
+          </figure>
+          <figure class="gallery__item">
+            <label class="gallery__link">
+              <input class="gallery__checkbox" type="checkbox">              
+              <img class="gallery__img" src="./imgs/tm-sigma-03.jpg" alt="picture1">              
+            </label>            
+          </figure>
+          <figure class="gallery__item">
+            <label class="gallery__link">
+              <input class="gallery__checkbox" type="checkbox">              
+              <img class="gallery__img" src="./imgs/tm-sigma-04.jpg" alt="picture1">              
+            </label>            
+          </figure>
         </div>
       </section>
-      <section class="main__section-title">
+      <section class="main__section-title" id="about">
         <div class="section-title">
           <h3 class="section-title__title">About Us</h3>
            <p class="section-title__subtitle">Voluptatum porro cupiditate corporis repudiandae assumenda, explicabo ratione pariatur, laudantium nulla exercitationem iste unde dolore quibusdam?</p>
@@ -169,19 +184,19 @@
               <h4 class="abilities__item-title">Left Column</h4>
               <p class="abilities__item-decription">Fugiat nulla voluptatem, magni repellendus non praesentium ad deleniti! Ea, dolor, aperiam.</p>
               <div class="abilities__link">
-                <a class="abilities__link-btn abilities__link-btn--detail" href="#">Read Detail</a>
+                <a class="abilities__link-btn abilities__link-btn--detail" href="#about">Read Detail</a>
               </div>
             </div>
             <div class="abilities__item abilities__item--5">
               <h4 class="abilities__item-title">Right Column</h4>
               <p class="abilities__item-decription">Fugiat nulla voluptatem, magni repellendus non praesentium ad deleniti! Ea, dolor, aperiam.</p>
               <div class="abilities__link">
-                <a class="abilities__link-btn abilities__link-btn--more" href="#">Learn More</a>
+                <a class="abilities__link-btn abilities__link-btn--more" href="#contacts">Learn More</a>
               </div>
             </div>            
           </div>
-          <div class="abilities__group-3 abilities__item--6">
-            <div class="abilities__item">
+          <div class="abilities__group-3">
+            <div class="abilities__item abilities__item--6">
               <h4 class="abilities__item-title">Our Team</h4>
               <p class="abilities__item-decription">Neque consequuntur eveniet vel dolores hic repudiandae consequatur veritatis, natus cumque illo.</p>
             </div>
@@ -200,7 +215,7 @@
           </div>
         </div>
       </section>
-      <section class="main__section-title">
+      <section class="main__section-title" id="contacts">
         <div class="section-title">
           <h3 class="section-title__title">Contact</h3>
           <p class="section-title__subtitle">Accusantium nostrum magnam placeat tempora magni ipsa quae tenetur aut accusamus nihil veniam perferendis praesentium, totam recusandae, saepe ab quos, laborum? Odio.</p>
@@ -220,7 +235,7 @@
               </div>
               <div class="form__item">
                 <label class="form__label">Your budget</label>
-                <select class="form__input">
+                <select class="form__input form__input--select">
                   <option class="form__option" value="500$">500$</option>
                   <option class="form__option" value="1000$">1000$</option>
                   <option class="form__option" value="1500$">1500$</option>
@@ -252,7 +267,7 @@
           <div class="contacts__item">
             <div class="address">
               <h4 class="address__title">Our Address</h4>
-              <p class="address__subtitle">Numquam deserunt, distinctio provident sint ullam earum iure placeat temporibus quibusdam ad. Fugiat, quia! Numquam id cupiditate sequi officia nihil blanditiis qui ad quidem.</p>
+              <p class="address__subtitle">Numquam deserunt, distinctio provident sint ullam earum iure placeat temporibus quibusdam ad. Fugiat, quia!</p>
               <div class="address__email">
                 <i class="address__email-icon icon-mail"></i>
                 <span class="address__email-text">Email: info@company.com</span>
@@ -271,7 +286,7 @@
         <p class="footer__info">Copyright &copy; 2016 Sigma Bootstrap 4 Theme | design: 
           <span class="footer__info-company">templetemo</span>
         </p>
-        <a href="#" class="footer__link">Go to top</a>
+        <a href="#to-top" class="footer__link">Go to top</a>
       </div>
     </footer>
   </div>

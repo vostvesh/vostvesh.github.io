@@ -1,0 +1,22 @@
+/*footer*/
+.footer__items {
+  border-top: 1px solid #b0b0b0;
+  height: 104px;
+  padding-top: 34px;
+}
+.footer__info {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #363636;
+}
+.footer__info-company {
+  color: #2287bb;
+}
+.footer__link {
+  float: right;
+  font-size: 1.6rem;
+  color: #2287bb;
+  text-decoration: none;
+}
+/*end footer*/

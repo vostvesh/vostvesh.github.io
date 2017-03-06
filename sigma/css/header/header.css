@@ -1,0 +1,36 @@
+@import url('./logo/logo.css');
+
+@import url('./menu/menu.css');
+
+@import url('./title/title.css');
+
+/*header*/
+.header__head {
+  /*height: 157px;*/
+  border-bottom: 1px solid #b0b0b0;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.header__main {
+  position: relative;
+  /*height: 616px;*/
+  margin-top: 15px;
+}
+.header__title {
+  /*height: 100%;*/
+  background: url('../../imgs/tm-sigma-00.jpg') 
+                    no-repeat center center fixed;
+  background-size: cover;
+}
+.header__logo {
+  padding: 26px 0;
+  flex-grow: 2;
+}
+.header__navbar {
+  padding-top: 71px;
+  flex-grow: 10;
+}
+.header__title {
+  padding: 144px 0;
+}
+/*end header*/
