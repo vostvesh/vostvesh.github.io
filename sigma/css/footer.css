@@ -1,8 +1,6 @@
-/*footer*/
 .footer__items {
-  border-top: 1px solid #b0b0b0;
-  height: 104px;
-  padding-top: 34px;
+  border-top: 1px solid #ccc;
+  padding: 3.2em 0 5em 0;
 }
 .footer__info {
   display: inline-block;
@@ -19,4 +17,14 @@
   color: #2287bb;
   text-decoration: none;
 }
-/*end footer*/
+
+@media (max-width: 768px) {
+  .footer__info {
+    display: inline-block;
+    width: 100%;
+  }
+  .footer__link {
+    float: right;
+    margin-top: 20px;
+  }
+}

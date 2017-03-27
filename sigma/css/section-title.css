@@ -1,4 +1,3 @@
-/*section-title*/
 .section-title {
   height: 100%;
   position: relative;
@@ -15,10 +14,21 @@
 }
 .section-title__subtitle {
   text-align: center;
-  margin-top: 22px;
-  font-size: 1.8rem;
-  line-height: 3.4rem;
+  margin-top: 1.2em;
+  font-size: 2em;
+  line-height: 1.8em;
   padding: 0 25%;
   color: #303d45;
 }
-/*end section-title*/
+
+@media (max-width: 1330px) {
+  .section-title__subtitle {
+    font-size: 1.7em;
+    line-height: 1.7em;
+  }
+}
+@media (max-width: 768px) {
+  .section-title__subtitle {
+    padding: 15px;
+  }
+}

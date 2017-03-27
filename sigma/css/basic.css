@@ -1,23 +1,23 @@
-/*basics*/
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 html, body {
-  /*width: 100%;
-  height: 100%;*/
   font-size: 10px;
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
 }
-.wrapper {
+.sigma-page {
   width: 90%;
   max-width: 1710px;
-  height: 100%;
   margin: 0 auto;
   display: flex;
   flex-flow: column;
 }
-/*end basics*/
+@media (max-width: 1330px) {
+  html {
+    font-size: 8px;
+  }
+}

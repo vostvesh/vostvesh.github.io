@@ -1,78 +1,37 @@
-/*abilities*/
-.abilities__group-1 {
-  /*height: 280px;*/
-  display: flex;
-  flex-flow: row nowrap;
-}
-.abilities__group-2 {
-  /*height: 318px;*/
-  display: flex;
-  flex-flow: row nowrap;
-}
-.abilities__group-3 {
-  /*height: 300px;*/
+.abilities__group {
   display: flex;
   flex-flow: row nowrap;
 }
 .abilities__item {
   flex-grow: 1;
-  padding: 60px 40px;
-}
-.abilities__items-1 {
-  /*height: 278px;*/
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+  padding: 6em 4em;
+  box-shadow: 0px 0px 0px 1px #fff;
 }
 .abilities__item-title {
-  font-size: 2.8rem;
-  line-height: 3.3rem;
+  font-size: 3rem;
+  line-height: 1.2em;
   font-weight: 400;
   color: #fff;
 }
 .abilities__item-decription {
-  margin-top: 29px;
-  line-height: 3.4rem;
+  padding: 1.5em 0 1.6em 0;
   font-size: 1.8rem;
+  line-height: 1.9em;  
   font-weight: 400;  
   color: #fff;
 }
-.abilities__items-2 {
-  /*height: 320px;*/
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
-.abilities__items-2 .abilities__item-title {
-  color: #060004; 
-}
-.abilities__items-2 .abilities__item-decription {
-  color: #060004; 
-}
-.abilities__link {
-  margin-top: 63px;
-}
-.abilities__items-3 {
-  /*height: 300px;*/
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
 .abilities__link-btn {
   text-decoration: none;
-  padding: 14px 20px;
+  padding: 1.4rem 2rem;
   border-radius: 5px;
   font-size: 2rem;
   color: #fff;
 }
 .abilities__item:hover .abilities__item-title {
-  color: #363a3b;
+  color: #000;
 }
 .abilities__item:hover .abilities__item-decription {
-  color: #363a3b;
+  color: #000;
 }
 .abilities__item--1 {
   background-color: #e3e7e8;
@@ -123,4 +82,28 @@
 .abilities__link-btn--more:active {
   background-color: #bc4945;
 }
-/*end abilities*/
+
+@media (max-width: 1330px) {
+  .abilities__item {
+    padding: 2.5em;
+  }
+}
+@media (max-width: 990px) {
+  .abilities__group {
+    flex-wrap: wrap;
+  }
+  .abilities__item {
+    width: 50%;
+  }
+  .abilities__item--3 {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .abilities__group {
+    flex-direction: column;
+  }
+  .abilities__item {
+    width: 100%;
+  }
+}
