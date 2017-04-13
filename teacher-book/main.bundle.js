@@ -1,9 +1,9 @@
 webpackJsonp([1,4],{
 
-/***/ 138:
+/***/ 141:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(26)();
+exports = module.exports = __webpack_require__(20)();
 // imports
 
 
@@ -18,15 +18,15 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 139:
+/***/ 142:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(26)();
+exports = module.exports = __webpack_require__(20)();
 // imports
 
 
 // module
-exports.push([module.i, "table, th, td {\n    border: 1px solid black;\n    border-collapse: collapse;\n}\ntd {\n    max-width: 60px;\n}\n.book-header {\n    background-color: orangered;\n}\n.book-header th {\n    padding: 10px;\n    cursor: pointer;\n}\n.student-name {\n    width: 300px;\n    text-align: left;\n    padding: 5px;\n    background-color: lightblue;\n}\n.rating {\n    width: 60px;\n    text-align: center;\n    height: 60px;\n}\n.rating-field {\n    width: 20px;\n}\n.new-student {\n    text-align: left;\n}\n.delete-student {\n    width: 20px;\n    padding: 2px;\n    background-color: crimson;\n    border-radius: 50%;\n    border: 1px solid transparent;\n    float: right;\n    color: white;    \n}\n.add {\n    width: 20px;\n    background-color: lightblue;\n    border-radius: 50%;\n    padding: 2px;\n    border: 1px solid transparent;\n    color: white;\n}", ""]);
+exports.push([module.i, ".input-name {\n  padding: 5px;\n}\n.get-teacher-book {\n  padding: 5px;\n  background-color: #02796B;\n  color: white;\n  border: 1px solid transparent;\n  border-radius: 4px;\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -36,29 +36,189 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 141:
-/***/ (function(module, exports) {
-
-module.exports = "<app-teacher-book></app-teacher-book>"
-
-/***/ }),
-
-/***/ 142:
-/***/ (function(module, exports) {
-
-module.exports = "<!--<input type=\"text\" [(ngModel)]=\"_vm.statValuesIndex\">-->\n<table>\n  <thead class=\"book-header\">\n    <tr>\n      <th>\n      </th>\n      <th *ngFor=\"let lesson of vm.lessons; \" (mouseover)=\"display($event, lesson)\">\n        {{lesson}}\n      </th>\n      <th>\n        <button (click)=\"addLesson()\" class=\"add\">+</button>\n      </th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let student of vm.students\" >\n      <th class=\"student-name\">\n        {{student.name}}\n        <button (click)=\"deleteStudent(student.name)\" class=\"delete-student\">X</button>\n      </th>\n      <td *ngFor=\"let value of student.values; let i = index;\" class=\"rating\">\n        <span *ngIf=\"value\">\n          {{value}}\n        </span>\n        <span *ngIf=\"!value\">\n          <input #valueInput type=\"text\" class=\"rating-field\">\n          <button (click)=\"addValue(student.name,i+1, valueInput.value)\" class=\"add\">+</button>\n\n        </span>\n        <span *ngIf=\"vm.statValuesIndex == i+1\" class=\"stat\">\n          ({{student.stat}})\n        </span>\n      </td>\n      <td></td>\n    </tr>\n    <tr>\n      <th class=\"new-student\">\n        <input type=\"text\" [(ngModel)]=\"newStudentName\">\n        <button (click)=\"addStudent()\">Add</button>\n      </th>\n      <td *ngFor=\"let lesson of vm.lessons\"></td>\n      <td></td>\n    </tr>\n  </tbody>\n</table>\n"
-
-/***/ }),
-
-/***/ 167:
+/***/ 143:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(70);
+exports = module.exports = __webpack_require__(20)();
+// imports
+
+
+// module
+exports.push([module.i, "th {\n  padding: 0;\n}\n\n.student-lesson--color-yellow {\n  background-color: #ffffb5;\n}\n\n.teacher-book {\n  border-spacing: 0;\n  border-collapse: collapse;\n  font-family: 'Ubuntu Light', sans-serif;\n}\n\n.add-btn {\n  cursor: pointer;\n}\n\n.header_add-btn {\n  background-color: #02796B;\n  color: white;\n  width: 20px;\n  font-size: 20px;\n  line-height: 24px;\n  border-radius: 0px 4px 4px 0px;\n}\n\n.header_add-btn:hover {\n  background-color: #00796b;\n}\n\n.student_name {\n  font-size: 12px;\n  border-spacing: 0;\n  border-collapse: collapse;\n  border: 1px solid #9fabb7;\n  padding: 4px;\n  background-color: #f5f5f5;\n}\n\n.delete-btn {\n  text-align: center;\n  cursor: pointer;\n  font-size: 12px;\n}\n\n.row_delete-btn {\n  color: red;\n}\n\n.student_lesson {\n  font-size: 12px;\n  border-spacing: 0;\n  border-collapse: collapse;\n  border: 1px solid #9fabb7;\n  padding: 4px;\n  text-align: center;\n}\n\n.lesson_input {\n  max-width: 24px;\n  border: none;\n  border-bottom: 1px solid #9fabb7;\n  box-shadow: 0px 0px;\n}\n\n.lesson_add-btn {\n  color: #02796B;\n}\n\n.lesson_add-btn:hover {\n  color: #1a241b\n}\n\n.row_lesson {\n  font-size: 12px;\n  cursor: pointer;\n  background-color: #f5f5f5;\n  border-spacing: 0;\n  border-collapse: collapse;\n  border: 1px solid #9fabb7;\n  min-width: 50px;\n}\n\n.student-name_input-container {\n  margin-top: 4px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.input-container_input {\n  width: 100px;\n  height: 20px;\n  padding: 1px 4px;\n  font-size: 10px;\n}\n\n.input-container_add-btn {\n  background-color: #02796B;\n  color: white;\n  width: 20px;\n  font-size: 20px;\n  line-height: 24px;\n  border-radius: 0px 4px 4px 0px;\n}\n\n.input-container_add-btn--disabled{\n  background-color: red;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 145:
+/***/ (function(module, exports) {
+
+module.exports = "<app-assistant-principal></app-assistant-principal>\n"
+
+/***/ }),
+
+/***/ 146:
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"isTeacherName()\">\n  <app-teacher-book [teacherName]=\"teacherName\"></app-teacher-book>\n</div>\n<div *ngIf=\"!isTeacherName()\">\n  <input class=\"input-name\" type=\"text\" [(ngModel)]=\"teacherName\" placeholder=\"Please input your name\">\n  <button class=\"get-teacher-book\" (click)=\"renderTeacherBook()\">Get Teacher Book</button> \n</div>\n"
+
+/***/ }),
+
+/***/ 147:
+/***/ (function(module, exports) {
+
+module.exports = "<table class=\"teacher-book\">\n\n  <thead class=\"teacher-book_header\">\n    <tr class=\"header_row\">\n      <th class=\"row_lesson\">\n      </th>\n      <th class=\"row_lesson\" *ngFor=\"let lesson of vm.lessons; let i = index;\" [attr.colspan]=\" i+1 === vm.statValuesIndex ? 2 : 1\" on-mousedown=\"setStatValuesIndex(lesson)\" on-mouseup=\"setStatValuesIndex(0)\">\n        {{lesson}}\n      </th>\n      <th>\n        <div class=\"add-btn header_add-btn\" (click)=\"addLesson()\">+</div>\n      </th>\n    </tr>\n  </thead>\n\n  <tbody class=\"teacher-book_body\">\n    <tr class=\"body_student\" *ngFor=\"let student of vm.students\">\n      <th class=\"student_name\">\n        {{student.name}}\n        <span class=\"delete-btn row_delete-btn delete-btn--btn-sm\" (click)=\"deleteStudent(student.name)\">X</span>\n      </th>\n      <ng-container *ngFor=\"let value of student.values; let i = index;\">\n        <td class=\"student_lesson\" *ngIf=\"i + 1 != vm.statValuesIndex; else renderWithStatistic\">\n          <span *ngIf=\"value\">{{value}}</span>\n          <span *ngIf=\"!value\">\n                <input class=\"lesson_input\"  #valueInput type=\"text\">\n                <span class=\"add-btn lesson_add-btn\" (click)=\"addValue(student.name,i+1, valueInput.value)\">+</span>\n          </span>\n        </td>\n        <ng-template #renderWithStatistic>\n          <td class=\"student_lesson\">\n            <div *ngIf=\"value\">{{value}}</div>\n            <span *ngIf=\"!value\">\n                <input class=\"lesson_input\" #valueInput type=\"text\">\n                <span class=\"add-btn lesson_add-btn\" (click)=\"addValue(student.name,i+1, valueInput.value)\">+</span>\n            </span>\n          </td>\n          <td class=\"student_lesson student-lesson--color-yellow\">\n            <span> {{student.stat}}</span>\n          </td>\n        </ng-template>\n      </ng-container>\n    </tr>\n    <tr>\n      <th>\n        <div class=\"student-name_input-container\">\n          <input placeholder=\"Write student name\" class=\"input input-container_input\" type=\"text\" [(ngModel)]=\"newStudentName\">\n          <div class=\"add-btn input-container_add-btn\" (click)=\"canAddStudent && addStudent()\" [ngClass]=\"{'input-container_add-btn--disabled': !canAddStudent}\">+</div>\n        </div>\n      </th>\n    </tr>\n  </tbody>\n</table>\n\n<button (click)=\"saveTeacherBook()\">Save</button>\n"
+
+/***/ }),
+
+/***/ 172:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(72);
 
 
 /***/ }),
 
-/***/ 69:
+/***/ 48:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__teacher_book__ = __webpack_require__(49);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TeacherBookService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var TeacherBookService = (function () {
+    function TeacherBookService() {
+        this.KEY = 'teacherBook';
+    }
+    TeacherBookService.prototype.setKey = function (key) {
+        this.KEY = key;
+    };
+    TeacherBookService.prototype.isEmpty = function () {
+        return localStorage.getItem(this.KEY) === null;
+    };
+    TeacherBookService.prototype.putTeacherBook = function (tb) {
+        localStorage.setItem(this.KEY, JSON.stringify(__WEBPACK_IMPORTED_MODULE_1__teacher_book__["a" /* TeacherBook */].toJson(tb)));
+    };
+    TeacherBookService.prototype.getTeacherBook = function () {
+        var tb = localStorage.getItem(this.KEY);
+        if (tb !== null) {
+            return __WEBPACK_IMPORTED_MODULE_1__teacher_book__["a" /* TeacherBook */].fromJson(JSON.parse(tb));
+        }
+        else {
+            throw new Error("Box is empty");
+        }
+    };
+    return TeacherBookService;
+}());
+TeacherBookService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])()
+], TeacherBookService);
+
+//# sourceMappingURL=teacher-book.service.js.map
+
+/***/ }),
+
+/***/ 49:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__rating__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__absence__ = __webpack_require__(79);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TeacherBook; });
+
+
+var TeacherBook = (function () {
+    function TeacherBook() {
+        this._studentsNames = [];
+        this._ratings = [];
+        this._absences = [];
+        this._lessonsCount = 0;
+    }
+    TeacherBook.toJson = function (tb) {
+        return {
+            ratings: tb._ratings.map(function (r) { return __WEBPACK_IMPORTED_MODULE_0__rating__["a" /* Rating */].toJson(r); }),
+            absences: tb._absences.map(function (a) { return __WEBPACK_IMPORTED_MODULE_1__absence__["a" /* Absence */].toJson(a); }),
+            studentsNames: tb._studentsNames,
+            lessonsCount: tb._lessonsCount
+        };
+    };
+    TeacherBook.fromJson = function (json) {
+        var tb = new TeacherBook();
+        tb._studentsNames = json.studentsNames;
+        tb._absences = json.absences.map(function (a) { return __WEBPACK_IMPORTED_MODULE_1__absence__["a" /* Absence */].fromJson(a); });
+        tb._lessonsCount = json.lessonsCount;
+        tb._ratings = json.ratings.map(function (r) { return __WEBPACK_IMPORTED_MODULE_0__rating__["a" /* Rating */].fromJson(r); });
+        return tb;
+    };
+    Object.defineProperty(TeacherBook.prototype, "studentsNames", {
+        get: function () {
+            return this._studentsNames;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(TeacherBook.prototype, "lessonsCount", {
+        get: function () {
+            return this._lessonsCount;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    TeacherBook.prototype.addStudent = function (studentName) {
+        var studName = this.studentsNames.find(function (sn) { return sn === studentName; });
+        if (!studentName) {
+            throw new Error('Enter student name');
+        }
+        if (studName) {
+            throw new Error("Student " + studentName + " is already exist!");
+        }
+        this._studentsNames.push(studentName);
+    };
+    TeacherBook.prototype.addLesson = function () {
+        this._lessonsCount++;
+    };
+    TeacherBook.prototype.setRating = function (studentName, lessonNumber, value) {
+        if (value < 0) {
+            throw new Error("Input value < 0");
+        }
+        this._ratings.push(new __WEBPACK_IMPORTED_MODULE_0__rating__["a" /* Rating */](studentName, lessonNumber, value));
+    };
+    TeacherBook.prototype.setAbsence = function (studentName, lessonNumber) {
+        this._absences.push(new __WEBPACK_IMPORTED_MODULE_1__absence__["a" /* Absence */](studentName, lessonNumber));
+    };
+    TeacherBook.prototype.removeStudent = function (studentName) {
+        this._studentsNames = this._studentsNames.filter(function (sn) { return sn != studentName; });
+        this._ratings = this._ratings.filter(function (r) { return r.studentName != studentName; });
+        this._absences = this._absences.filter(function (a) { return a.studentName != studentName; });
+    };
+    TeacherBook.prototype.getRating = function (studentName, lessonNumber) {
+        var rating = this._ratings.find(function (r) { return r.studentName === studentName && r.lessonNumber === lessonNumber; });
+        return rating ? rating.value : null;
+    };
+    TeacherBook.prototype.isAbsend = function (studentName, lessonNumber) {
+        var isAbsend = this._absences.find(function (a) { return a.studentName === studentName && a.lessonNumber === lessonNumber; });
+        return !!isAbsend;
+    };
+    return TeacherBook;
+}());
+
+//# sourceMappingURL=teacher-book.js.map
+
+/***/ }),
+
+/***/ 71:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -67,20 +227,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 69;
+webpackEmptyContext.id = 71;
 
 
 /***/ }),
 
-/***/ 70:
+/***/ 72:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(87);
 
 
 
@@ -93,7 +253,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 77:
+/***/ 79:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -117,6 +277,15 @@ var Absence = (function () {
         enumerable: true,
         configurable: true
     });
+    Absence.toJson = function (absence) {
+        return {
+            lessonNumber: absence.lessonNumber,
+            studentName: absence.studentName
+        };
+    };
+    Absence.fromJson = function (json) {
+        return new Absence(json.studentName, json.lessonNumber);
+    };
     return Absence;
 }());
 
@@ -124,11 +293,11 @@ var Absence = (function () {
 
 /***/ }),
 
-/***/ 78:
+/***/ 80:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(3);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -136,35 +305,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'app works!';
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-root',
-        template: __webpack_require__(141),
-        styles: [__webpack_require__(138)]
-    })
+        template: __webpack_require__(145),
+        styles: [__webpack_require__(141)]
+    }),
+    __metadata("design:paramtypes", [])
 ], AppComponent);
 
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
 
-/***/ 79:
+/***/ 81:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__teacher_book_teacher_book_component__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__teacher_book_service__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__teacher_book_teacher_book_component__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__assistant_principal_assistant_principal_component__ = __webpack_require__(83);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -172,6 +346,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -186,16 +362,17 @@ var AppModule = (function () {
 AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_5__teacher_book_teacher_book_component__["a" /* TeacherBookComponent */]
+            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__teacher_book_teacher_book_component__["a" /* TeacherBookComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__assistant_principal_assistant_principal_component__["a" /* AssistantPrincipalComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */]
         ],
-        providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_4__teacher_book_service__["a" /* TeacherBookService */]],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -203,7 +380,100 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 80:
+/***/ 82:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__teacher_book_service__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__teacher_book__ = __webpack_require__(49);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AssistantPrincipal; });
+
+
+var AssistantPrincipal = (function () {
+    function AssistantPrincipal() {
+        this._name = '';
+    }
+    AssistantPrincipal.prototype.setName = function (name) {
+        this._name = name;
+    };
+    AssistantPrincipal.prototype.getName = function () {
+        return this._name;
+    };
+    AssistantPrincipal.prototype.setTeacherBook = function () {
+        this._teacherBookService = new __WEBPACK_IMPORTED_MODULE_0__teacher_book_service__["a" /* TeacherBookService */]();
+        this._teacherBookService.setKey(this._name);
+        if (!this._teacherBookService.isEmpty()) {
+            this._teacherBook = this._teacherBookService.getTeacherBook();
+        }
+        else {
+            this._teacherBook = new __WEBPACK_IMPORTED_MODULE_1__teacher_book__["a" /* TeacherBook */]();
+        }
+    };
+    AssistantPrincipal.prototype.getTeacherBook = function () {
+        return this._teacherBook;
+    };
+    AssistantPrincipal.prototype.saveTeacherBook = function () {
+        this._teacherBookService.putTeacherBook(this._teacherBook);
+    };
+    return AssistantPrincipal;
+}());
+
+//# sourceMappingURL=assistant-principal.js.map
+
+/***/ }),
+
+/***/ 83:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(3);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AssistantPrincipalComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AssistantPrincipalComponent = (function () {
+    function AssistantPrincipalComponent() {
+    }
+    AssistantPrincipalComponent.prototype.setTeacherName = function () {
+        this._teacherName = this.teacherName;
+    };
+    AssistantPrincipalComponent.prototype.getTeacherName = function () {
+        return this._teacherName;
+    };
+    AssistantPrincipalComponent.prototype.renderTeacherBook = function () {
+        this.setTeacherName();
+    };
+    AssistantPrincipalComponent.prototype.isTeacherName = function () {
+        return this._teacherName ? true : false;
+    };
+    AssistantPrincipalComponent.prototype.isInputEmpty = function () {
+        return this.teacherName !== '';
+    };
+    AssistantPrincipalComponent.prototype.ngOnInit = function () {
+    };
+    return AssistantPrincipalComponent;
+}());
+AssistantPrincipalComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
+        selector: 'app-assistant-principal',
+        template: __webpack_require__(146),
+        styles: [__webpack_require__(142)]
+    }),
+    __metadata("design:paramtypes", [])
+], AssistantPrincipalComponent);
+
+//# sourceMappingURL=assistant-principal.component.js.map
+
+/***/ }),
+
+/***/ 84:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -235,6 +505,16 @@ var Rating = (function () {
         enumerable: true,
         configurable: true
     });
+    Rating.toJson = function (rating) {
+        return {
+            lessonNumber: rating.lessonNumber,
+            studentName: rating.studentName,
+            value: rating.value
+        };
+    };
+    Rating.fromJson = function (json) {
+        return new Rating(json.studentName, json.lessonNumber, json.value);
+    };
     return Rating;
 }());
 
@@ -242,7 +522,7 @@ var Rating = (function () {
 
 /***/ }),
 
-/***/ 81:
+/***/ 85:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -261,7 +541,7 @@ var TeacherAssistant = (function () {
                     sum += rating;
                 }
             }
-            statisticByStudentName.set(studentName, sum / Math.min(maxLessonToInclude, teacherBook.lessonsCount));
+            statisticByStudentName.set(studentName, +(sum / Math.min(maxLessonToInclude, teacherBook.lessonsCount)).toFixed(2));
         }
         return statisticByStudentName;
     };
@@ -272,75 +552,13 @@ var TeacherAssistant = (function () {
 
 /***/ }),
 
-/***/ 82:
+/***/ 86:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__rating__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__absence__ = __webpack_require__(77);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TeacherBook; });
-
-
-var TeacherBook = (function () {
-    function TeacherBook() {
-        this._studentsNames = [];
-        this._ratings = [];
-        this._absences = [];
-        this._lessonsCount = 0;
-    }
-    Object.defineProperty(TeacherBook.prototype, "studentsNames", {
-        get: function () {
-            return this._studentsNames;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(TeacherBook.prototype, "lessonsCount", {
-        get: function () {
-            return this._lessonsCount;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    TeacherBook.prototype.addStudent = function (studentName) {
-        this._studentsNames.push(studentName);
-    };
-    TeacherBook.prototype.addLesson = function () {
-        this._lessonsCount++;
-    };
-    TeacherBook.prototype.setRating = function (studentName, lessonNumber, value) {
-        this._ratings.push(new __WEBPACK_IMPORTED_MODULE_0__rating__["a" /* Rating */](studentName, lessonNumber, value));
-    };
-    TeacherBook.prototype.setAbsence = function (studentName, lessonNumber) {
-        this._absences.push(new __WEBPACK_IMPORTED_MODULE_1__absence__["a" /* Absence */](studentName, lessonNumber));
-    };
-    TeacherBook.prototype.removeStudent = function (studentName) {
-        this._studentsNames = this._studentsNames.filter(function (sn) { return sn != studentName; });
-        this._ratings = this._ratings.filter(function (r) { return r.studentName != studentName; });
-        this._absences = this._absences.filter(function (a) { return a.studentName != studentName; });
-    };
-    TeacherBook.prototype.getRating = function (studentName, lessonNumber) {
-        var rating = this._ratings.find(function (r) { return r.studentName == studentName && r.lessonNumber == lessonNumber; });
-        return rating ? rating.value : null;
-    };
-    TeacherBook.prototype.isAbsend = function (studentName, lessonNumber) {
-        var isAbsend = this._absences.find(function (a) { return a.studentName == studentName && a.lessonNumber == lessonNumber; });
-        return !!isAbsend;
-    };
-    return TeacherBook;
-}());
-
-//# sourceMappingURL=teacher-book.js.map
-
-/***/ }),
-
-/***/ 83:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__teacher_book__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__teacher_assistant__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__teacher_assistant__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assistant_principal__ = __webpack_require__(82);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TeacherBookComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -355,19 +573,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var TeacherBookComponent = (function () {
+    // constructor(private _teacherBookBox: TeacherBookService) {
+    //   this._teacherAssistant = new TeacherAssistant();
+    //   if (this._teacherBookBox.isEmpty) {
+    //     this._teacherBook = new TeacherBook();
+    //   } else {
+    //     this._teacherBook = this._teacherBookBox.getTeacherBook();
+    //   }
+    //   this._vm = { statValuesIndex: 0 };
+    // }
+    // ngOnInit() {
+    //   let tb = localStorage.getItem('teacherBook');
+    //   if (tb !== null) {
+    //     this._teacherBook = TeacherBook.fromJson(JSON.parse(tb));
+    //   } else {
+    //     this._teacherBook = new TeacherBook();
+    //   }
+    // }
     function TeacherBookComponent() {
-        this._teacherAssistant = new __WEBPACK_IMPORTED_MODULE_2__teacher_assistant__["a" /* TeacherAssistant */]();
-        this._teacherBook = new __WEBPACK_IMPORTED_MODULE_1__teacher_book__["a" /* TeacherBook */]();
-        this._teacherBook.addLesson();
-        this._teacherBook.addLesson();
-        this._teacherBook.addLesson();
-        this._teacherBook.addLesson();
-        this._teacherBook.addStudent("Александр");
-        this._teacherBook.addStudent("Николай");
-        this._teacherBook.setAbsence("Александр", 2);
-        this._teacherBook.setRating("Николай", 2, 1);
+        this.newStudentName = "";
+        this._teacherAssistant = new __WEBPACK_IMPORTED_MODULE_1__teacher_assistant__["a" /* TeacherAssistant */]();
+        this._assistantPrincipal = new __WEBPACK_IMPORTED_MODULE_2__assistant_principal__["a" /* AssistantPrincipal */]();
         this._vm = { statValuesIndex: 0 };
     }
+    Object.defineProperty(TeacherBookComponent.prototype, "canAddStudent", {
+        get: function () {
+            var _this = this;
+            return this.newStudentName.length > 0 && !this._teacherBook.studentsNames.find(function (s) { return s === _this.newStudentName; });
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ;
     TeacherBookComponent.prototype.updateVm = function (oldVm, teacherBook) {
         var newVM = oldVm;
         newVM.lessons = [];
@@ -380,7 +617,7 @@ var TeacherBookComponent = (function () {
             for (var lessonNumber = 1; lessonNumber <= teacherBook.lessonsCount; lessonNumber++) {
                 var rating = teacherBook.getRating(studentName, lessonNumber);
                 var absence = teacherBook.isAbsend(studentName, lessonNumber);
-                var value = rating ? rating.toString() : absence ? "Н" : null;
+                var value = rating != null ? rating.toString() : absence ? "Н" : null;
                 values.push(value);
             }
             return {
@@ -392,6 +629,17 @@ var TeacherBookComponent = (function () {
         return newVM;
     };
     TeacherBookComponent.prototype.ngOnInit = function () {
+        this._assistantPrincipal.setName(this.teacherName);
+        this._assistantPrincipal.setTeacherBook();
+        this._teacherBook = this._assistantPrincipal.getTeacherBook();
+        // let tb = localStorage.getItem(this._assistantPrincipal.getName());
+        // if (tb !== null) {
+        //   this._teacherBook = TeacherBook.fromJson(JSON.parse(tb));
+        // } else {
+        //   this._teacherBook = new TeacherBook();
+        // }
+    };
+    TeacherBookComponent.prototype.ngOnDestroy = function () {
     };
     Object.defineProperty(TeacherBookComponent.prototype, "vm", {
         get: function () {
@@ -403,16 +651,18 @@ var TeacherBookComponent = (function () {
     });
     TeacherBookComponent.prototype.addStudent = function () {
         this._teacherBook.addStudent(this.newStudentName);
+        this.newStudentName = "";
     };
     TeacherBookComponent.prototype.addLesson = function () {
         this._teacherBook.addLesson();
     };
     TeacherBookComponent.prototype.addValue = function (studentName, lessonNumber, value) {
+        var parsedValue = parseInt(value);
         if (!value) {
             return;
         }
-        else if (+value) {
-            this._teacherBook.setRating(studentName, lessonNumber, +value);
+        else if (!Number.isNaN(parsedValue)) {
+            this._teacherBook.setRating(studentName, lessonNumber, parsedValue);
         }
         else {
             this._teacherBook.setAbsence(studentName, lessonNumber);
@@ -421,16 +671,26 @@ var TeacherBookComponent = (function () {
     TeacherBookComponent.prototype.deleteStudent = function (studentName) {
         this._teacherBook.removeStudent(studentName);
     };
-    TeacherBookComponent.prototype.display = function (e, lesson) {
-        this._vm.statValuesIndex = lesson;
+    TeacherBookComponent.prototype.setStatValuesIndex = function (lesson) {
+        this.vm.statValuesIndex = lesson;
+    };
+    // public saveTeacherBook(): void {
+    //   this._teacherBookBox.putTeacherBook(this._teacherBook);
+    // }
+    TeacherBookComponent.prototype.saveTeacherBook = function () {
+        this._assistantPrincipal.saveTeacherBook();
     };
     return TeacherBookComponent;
 }());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* Input */])(),
+    __metadata("design:type", String)
+], TeacherBookComponent.prototype, "teacherName", void 0);
 TeacherBookComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
         selector: 'app-teacher-book',
-        template: __webpack_require__(142),
-        styles: [__webpack_require__(139)]
+        template: __webpack_require__(147),
+        styles: [__webpack_require__(143)]
     }),
     __metadata("design:paramtypes", [])
 ], TeacherBookComponent);
@@ -439,7 +699,7 @@ TeacherBookComponent = __decorate([
 
 /***/ }),
 
-/***/ 84:
+/***/ 87:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -456,5 +716,5 @@ var environment = {
 
 /***/ })
 
-},[167]);
+},[172]);
 //# sourceMappingURL=main.bundle.js.map
