@@ -1598,8 +1598,10 @@ var AuthService = (function () {
         }
     };
     AuthService.prototype.isUser = function (userName, password) {
-        if (this._user.userName === userName && this._password === password) {
-            return true;
+        if (this._user !== null) {
+            if (this._user.userName === userName && this._password === password) {
+                return true;
+            }
         }
         return false;
     };
