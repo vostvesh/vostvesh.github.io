@@ -378,6 +378,7 @@ var LocationPickerComponent = (function () {
         this.position = '';
         this.locationJson = [];
         this.onLocationPickerOK = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.findMe();
     }
     LocationPickerComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -802,7 +803,7 @@ module.exports = "<div class=\"location-picker__container\">\n\n  <input class=\
 /***/ 209:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"login__container\">\n\n  <form class=\"login__form\">\n\n    <app-form-alert *ngIf=\"isAlert\" [message]=\"alertMessage\" (onFormAlert)=\"onFormAlert($event)\"></app-form-alert>\n\n    <div class=\"login__header\">\n      <h4 class=\"login__header-text\">Войти</h4>\n    </div>\n\n    <div class=\"login__field\">\n      <input class=\"login__field-input\" type=\"text\" placeholder=\"username\" #username value=\"vasya12345\">\n      <span class=\"login__field-cancel\" (click)=\"onResetValue(username)\"><i class=\"icon-cancel\"></i></span>\n    </div>\n\n    <div class=\"login__field\">\n      <input class=\"login__field-input\" type=\"text\" placeholder=\"password\" #password value=\"vasya12345\">\n      <span class=\"login__field-cancel\" (click)=\"onResetValue(password)\"><i class=\"icon-cancel\"></i></span>\n    </div>\n\n    <div class=\"login__submit\">\n      <input class=\"login__btn login__btn--submit\" type=\"submit\" value=\"Submit\" (click)=\"login(username.value, password.value)\">\n      <button class=\"login__btn login__btn--register\" (click)=\"register()\">Registration</button>\n    </div>\n\n  </form>\n  \n</div>\n"
+module.exports = "<div class=\"login__container\">\n\n  <form class=\"login__form\">\n\n    <app-form-alert *ngIf=\"isAlert\" [message]=\"alertMessage\" (onFormAlert)=\"onFormAlert($event)\"></app-form-alert>\n\n    <div class=\"login__header\">\n      <h4 class=\"login__header-text\">Войти</h4>\n    </div>\n\n    <div class=\"login__field\">\n      <input class=\"login__field-input\" type=\"text\" placeholder=\"username\" #username>\n      <span class=\"login__field-cancel\" (click)=\"onResetValue(username)\"><i class=\"icon-cancel\"></i></span>\n    </div>\n\n    <div class=\"login__field\">\n      <input class=\"login__field-input\" type=\"text\" placeholder=\"password\" #password>\n      <span class=\"login__field-cancel\" (click)=\"onResetValue(password)\"><i class=\"icon-cancel\"></i></span>\n    </div>\n\n    <div class=\"login__submit\">\n      <input class=\"login__btn login__btn--submit\" type=\"submit\" value=\"Submit\" (click)=\"login(username.value, password.value)\">\n      <button class=\"login__btn login__btn--register\" (click)=\"register()\">Registration</button>\n    </div>\n\n  </form>\n  \n</div>\n"
 
 /***/ }),
 
