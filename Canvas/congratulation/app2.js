@@ -493,4 +493,4 @@ const interval = setInterval(() => {
     clearInterval(interval);
     console.log("finish scene 1");
   }
-}, 6);
+}, 9);
