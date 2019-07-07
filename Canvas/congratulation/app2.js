@@ -4,7 +4,7 @@ const c = canvas.getContext("2d");
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
-canvas.style.background = "magenta";
+canvas.style.background = "black";
 // c.fillRect(0, 0, innerWidth, innerHeight);
 
 class Stripe {
@@ -488,9 +488,11 @@ const interval = setInterval(() => {
   const res = curtainsScene();
   c.beginPath();
   if (!res) {
+    canvas.style.background = "magenta";
+
     fireworksScene();
     dispatchEvent(new Event('sceneFinish'));
     clearInterval(interval);
     console.log("finish scene 1");
   }
-}, 9);
+}, 10);

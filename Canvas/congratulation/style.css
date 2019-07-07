@@ -19,6 +19,7 @@ span {
 }
 
 .container {
+  display: block;
   width: 800px;
   height: 420px;
   padding: 10px;
@@ -31,6 +32,7 @@ span {
 
 .balloon {
   width: 738px;
+  height: 100%;
   margin: 0 auto;
   padding-top: 30px;
   position: relative;
@@ -39,6 +41,8 @@ span {
 .balloon>div {
   /* width: 104px;
   height: 140px; */
+  transition: 4s;
+  top: 130%;
   width: 6em;
   height: 7em;
   background: rgba(182, 15, 97, 0.9);
