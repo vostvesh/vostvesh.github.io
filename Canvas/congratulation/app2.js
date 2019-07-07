@@ -5,6 +5,7 @@ canvas.width = innerWidth;
 canvas.height = innerHeight;
 
 canvas.style.background = "black";
+
 // c.fillRect(0, 0, innerWidth, innerHeight);
 
 class Stripe {

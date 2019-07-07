@@ -41,7 +41,7 @@ span {
 .balloon>div {
   /* width: 104px;
   height: 140px; */
-  transition: 4s;
+  transition: 2s;
   top: 130%;
   width: 6em;
   height: 7em;
