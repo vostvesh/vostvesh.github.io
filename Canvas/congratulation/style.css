@@ -37,8 +37,10 @@ span {
 }
 
 .balloon>div {
-  width: 104px;
-  height: 140px;
+  /* width: 104px;
+  height: 140px; */
+  width: 6em;
+  height: 7em;
   background: rgba(182, 15, 97, 0.9);
   border-radius: 0;
   border-radius: 80% 80% 80% 80%;
@@ -143,7 +145,7 @@ span {
 }
 
 span {
-  font-size: 4.8em;
+  font-size: 4em;
   color: white;
   position: relative;
   top: 30px;

@@ -299,7 +299,7 @@ const fireworksScene = () => {
       c.fillStyle = this.color;
       c.shadowColor = this.color;
       c.shadowBlur = Math.random() < 0.02 ? 0 : this.fontSize / 5;
-      c.fillText(this.content, canvas.width / 2, canvas.height / 2);
+      c.fillText(this.content, canvas.width / 2, canvas.height / 2.5);
       c.restore();
     }
   }
