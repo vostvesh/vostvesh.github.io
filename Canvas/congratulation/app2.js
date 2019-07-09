@@ -287,11 +287,11 @@ const fireworksScene = () => {
       this.color = color;
 
       if (canvas.width > 800) {
-        this.fontSize = 90;
-      } else if (canvas.width > 500) {
         this.fontSize = 70;
+      } else if (canvas.width > 500) {
+        this.fontSize = 50;
       } else {
-        this.fontSize = 40;
+        this.fontSize = 20;
       }
     }
     display() {

@@ -25,7 +25,7 @@
     div.style.left = "50%";
     div.style.transform = "translateX(-50%)";
     // div.style.bottom = '60px';
-    div.style.top = "50%";
+    div.style.top = "48%";
     div.textContent = text;
     document.body.append(div);
   });
