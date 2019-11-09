@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{9:function(e,n,s){"use strict";s.r(n);const c=new class{render(e){alert(e)}};Object.freeze(c),n.default=c}}]);

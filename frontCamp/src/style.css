@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+li {
+  list-style: none;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 5px;
+  width: 49%;
+  cursor: pointer;
+  background-color: rgba(233, 226, 226, 0.4);
+}
+
+img {
+  width: 100%;
+}
+
+h3 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+}

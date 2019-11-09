@@ -1,0 +1,13 @@
+Go to https://newsapi.org/ Press ‘Get API Key’ on the right Enter your desired creds and promise to add an attribution link to NewsAPI Press submit and store your API key - this one will be used for API requests Test you did well - https://newsapi.org/v1/articles?source={{CHANEL_CODE}}&apiKey={{YOUR_API_KEY}} Create application, using your GitHub page on your GitHub account: https://pages.github.com/ Using ES6 knowledge,create an application that uses NewsAPI, which will run purely on the client-side in latest Chrome browser (no server-side work expected). Use async/await with fetch Add Webpack: - Use Babel as a loader. - Use style and url loaders. (Sass/less/stylus, autoprefixer optional) - Each part of logic should be in a separate file. (ES6 modules) - Use plugins - Configure the bundler for development and production mode. - Configure Webpack-dev-server Your app should provide possibility for a user to select a particular news channel and list any number of latest (let’s say 10) records. You're not allowed to use any framework
+
+1- Lazy Initialization: Within the project, it is necessary to implement error handling handlers from the server (too many results, page size or other exceptions). All error handling functionality should be loaded only on demand, that is, when an exceptional situation occurs. 
+PS: Overlaps with lazy loading from the Webpack topic ;)
+
+2 - 1 + Singleton: Within the project, Error Handler Popup should be organized as Singleton
+
+3 - 2 + Factory: Within the project, it is necessary to implement a layer / factory responsible for requests to the server with GET, POST, PUT, etc methods. Not all types of requests can be used within the project, but it is important to organize everything correctly.
+
+4 - 3 + Proxy: Within the project, it is necessary to implement a proxy layer above the factory from p. 3, which would log all kinds of requests and transmitted parameters.
+PS: use ES6 Proxy
+
+5 - 4 + Organize all code using MV* Pattern
